@@ -8,6 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.viewmodel.compose.viewModel
 import kr.ac.kumoh.ce.prof01.jet20retrofit.ui.theme.Jet20RetrofitTheme
 
 class MainActivity : ComponentActivity() {
@@ -27,6 +28,12 @@ fun MainScreen() {
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
     ) {
-
+        SongList()
     }
 }
+
+@Composable
+fun SongList() {
+    val viewModel: SongViewModel = viewModel()
+}
+
